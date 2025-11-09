@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申請完了ページ</title>
+    <style>
+        /* 基本スタイル */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            padding: 40px 20px;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* コンテナ */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* ロゴ画像 */
+        .logo-container {
+            margin: 20px 0 40px;
+        }
+        
+        .logo {
+            width: 180px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        /* メッセージボックス */
+        .message-box {
+            background-color: #ffffff;
+            padding: 30px;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .message-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background-color: #007BFF;
+        }
+        
+        .message {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .message strong {
+            color: #007BFF;
+            font-weight: 600;
+        }
+        
+        /* 完了アイコン */
+        .success-icon {
+            font-size: 60px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        
+        /* お問い合わせ情報 */
+        .contact-info {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+        
+        .contact-info h2 {
+            font-size: 22px;
+            color: #0056b3;
+            margin-top: 0;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .contact-info h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background-color: #0056b3;
+        }
+        
+        .contact-info p {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 28px;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+        }
+        
+        /* アニメーション */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ロゴ画像 -->
+        <div class="logo-container fade-in">
+            <img src="logo.png" alt="JB レンタカー ロゴ" class="logo">
+        </div>
+        
+        <!-- 完了アイコン -->
+        <div class="success-icon fade-in delay-1">✓</div>
+        
+        <!-- メッセージボックス -->
+        <div class="message-box fade-in delay-2">
+            <div class="message">
+                <p>ご申請ありがとうございます。内容を確認次第、メールにてご連絡いたします。</p>
+                <p><strong>@jb-rentacar.com</strong> のメールをご確認ください。<br>
+                迷惑メールフォルダに振り分けられないようご注意ください。</p>
+            </div>
+        </div>
+        
+        <!-- お問い合わせ情報 -->
+        <div class="contact-info fade-in delay-3">
+            <h2>お問い合わせ</h2>
+            <p>ご不明な点がございましたら、お気軽にお問い合わせください。</p>
+            <a href="tel:0120-204-625" class="contact-button">📞 フリーダイヤル: 0120-204-625</a>
+        </div>
+    </div>
+</body>
+</html>
