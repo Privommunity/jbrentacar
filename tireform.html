@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タイヤ交換日調整フォーム</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --light-gray: #ecf0f1;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 25px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        ul {
+            background-color: var(--light-gray);
+            padding: 15px 15px 15px 35px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="date"],
+        input[type="time"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        legend {
+            font-weight: bold;
+            color: var(--primary-color);
+            padding: 0 10px;
+        }
+        
+        .time-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .time-group input {
+            flex: 1;
+        }
+        
+        .confirmation-box {
+            background-color: var(--light-gray);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .required {
+            color: var(--accent-color);
+        }
+        
+        .note {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>タイヤ交換日調整フォーム</h2>
+        <p>この度はJBレンタカーをご利用いただきありがとうございます。<br>
+           現在お貸し出し中のレンタカーは、タイヤ交換が必要な時期を迎えております。<br>
+           つきましては、タイヤ交換のご希望日をお知らせください。</p>
+        
+        <h3>【タイヤ交換先情報】</h3>
+        <ul>
+            <li>合同会社なないろ 担当：佐々木様</li>
+            <li>住所：石巻市須江関ノ入39</li>
+            <li>対応可能時間：平日・土曜10:00〜18:00</li>
+        </ul>
+        
+        <form action="https://ssgform.com/s/4MtuF6rGAOkr" method="post">
+            <div class="form-group">
+                <label for="contractor">ご契約者名 <span class="required">*</span></label>
+                <input type="text" id="contractor" name="ご契約者名" placeholder="石巻　太郎" required>
+            </div>
+            
+            <fieldset>
+                <legend>第一希望 <span class="required">*</span></legend>
+                <div class="form-group">
+                    <label for="date1">日付:</label>
+                    <input type="date" id="date1" name="第一希望日" required>
+                    <p class="note">※日曜日は選択できません</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time1">時間:</label>
+                    <select id="time1" name="第一希望時間" required>
+                        <option value="">選択してください</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>第二希望 <span class="required">*</span></legend>
+                <div class="form-group">
+                    <label for="date2">日付:</label>
+                    <input type="date" id="date2" name="第二希望日" required>
+                    <p class="note">※日曜日は選択できません</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="time2">時間:</label>
+                    <select id="time2" name="第二希望時間" required>
+                        <option value="">選択してください</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+            </fieldset>
+            
+            <div class="confirmation-box">
+                <label class="checkbox-container">
+                    <input type="checkbox" name="確認事項" required>
+                    対応可能日時は平日・土曜の10:00～18:00となります。<br>
+                    本回答のみでは予約は確定いたしません。ご回答いただいた後、提携先工場の空き状況を確認させていただきますので、予約確定のご連絡をお待ちください。
+                </label>
+            </div>
+            
+            <button type="submit">送信する</button>
+        </form>
+    </div>
+
+    <script>
+        // 現在の日付を取得
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        const formattedToday = `${yyyy}-${mm}-${dd}`;
+        
+        // 日付入力フィールドの最小値を今日に設定
+        document.querySelectorAll('input[type="date"]').forEach(input => {
+            input.setAttribute('min', formattedToday);
+            
+            // 日曜日チェック
+            input.addEventListener('input', () => {
+                if (input.value) {
+                    const selectedDay = new Date(input.value).getDay();
+                    if (selectedDay === 0) {
+                        alert('日曜日は選択できません。');
+                        input.value = '';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
